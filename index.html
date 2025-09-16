@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Geoffrey Julianto — Portfolio</title>
+  <meta name="description" content="Computer Science student | Database submajor | Web & data projects" />
+
+  <style>
+    :root{
+      --max-width:900px;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --card-bg:#fff;
+      --bg:#f8fafc;
+      --radius:14px;
+      --gap:1rem;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);color:#0f172a;line-height:1.5;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+    .hero{background:linear-gradient(180deg, rgba(37,99,235,0.09), transparent);padding:3rem 0;border-bottom:1px solid rgba(15,23,42,0.04)}
+    .hero h1{margin:0;font-size:2.1rem}
+    .subtitle{color:var(--muted);margin-top:.4rem}
+    .cta{margin-top:1rem}
+    .btn{display:inline-block;padding:.5rem .9rem;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn{background:var(--accent);color:white}
+    .btn-outline{background:transparent;border:2px solid rgba(37,99,235,0.12);color:var(--accent);margin-left:.6rem}
+
+    main{padding:2rem 0}
+    h2{font-size:1.2rem;margin-bottom:.6rem}
+    p.lead{color:var(--muted);margin-top:0}
+
+    .skills-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+    .skills-list li{background:white;padding:.4rem .6rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-size:.9rem}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+    .card{background:var(--card-bg);border-radius:12px;padding:1rem;border:1px solid rgba(15,23,42,0.04);box-shadow:0 1px 4px rgba(2,6,23,0.02)}
+    .card h3{margin:0 0 .4rem 0}
+    .card p{margin:.25rem 0;color:var(--muted)}
+    .meta{font-size:.85rem;color:var(--muted)}
+
+    footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+    @media (max-width:560px){
+      .hero{padding:2rem 0}
+      .container{padding:1rem}
+    }
+  </style>
+</head>
+  
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Hi — I'm Geoffrey Julianto</h1>
+      <p class="subtitle">Computer Science student • Database submajor • Web development & data</p>
+      <p class="cta"><a href="#projects" class="btn">See my projects</a> <a class="btn btn-outline" href="#contact">Contact</a></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About me</h2>
+      <p class="lead">As a computer science student specializing in database systems, I build reliable, data-driven solutions using C, Python, Java, SQL, and modern web technologies (HTML, CSS, JavaScript). My academic path exposed me to cloud computing, data analytics, and big data; I am currently exploring data mining, GIS, and web programming. I enjoy turning messy datasets into clear insights and crafting web interfaces that make those insights useful.</p>
+    </section>
+
+    <section id="skills" style="margin-top:1.6rem">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>C</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>SQL / Database Design</li>
+        <li>HTML • CSS • JavaScript</li>
+        <li>Cloud Computing</li>
+        <li>Data Analytics • Data Mining</li>
+        <li>GIS</li>
+      </ul>
+    </section>
+
+    <section id="projects" style="margin-top:1.6rem">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!-- Project card -->
+        <article class="card">
+          <h3>Schedule Maker App (Flutter)</h3>
+          <p class="meta">Features: categories, JSON storage, styled UI</p>
+          <p>A simple schedule manager categorized into Productivity and Leisure. Built as a college project — source on GitHub.</p>
+          <p><a href="#" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Personal Website (This site)</h3>
+          <p class="meta">HTML • CSS • GitHub Pages</p>
+          <p>Static portfolio hosted with GitHub Pages. Use this repo as a template to get started quickly.</p>
+          <p><a href="#" target="_blank">View source</a></p>
+        </article>
+
+        <!-- For future Project Cards -->
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:1.6rem">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate, hire, or ask about my projects — email me at <a href="mailto:youremail@example.com">youremail@example.com</a> or connect on LinkedIn.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Geoffrey Julianto — Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
