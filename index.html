@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Geoffrey Duncan Julianto — Portfolio</title>
-  <meta name="description" content="Computer Science Major | Database submajor | Web & data projects" />
+  <meta name="description" content="Computer Science Major | Database Submajor | Web & data projects" />
 
   <style>
     :root{
@@ -16,36 +16,144 @@
       --radius:14px;
       --gap:1rem;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{
+      box-sizing:border-box
+    }
+
+    html,body{
+      height:100%
+    }
+
     body{
       margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
       background:var(--bg);color:#0f172a;line-height:1.5;background-color:#F2DAE5;
     }
-    .container{max-width:var(--max-width);margin:0 auto;padding:2rem}
 
-    .hero{background:linear-gradient(180deg, rgba(37,99,235,0.09), transparent);padding:3rem 0;border-bottom:1px solid rgba(15,23,42,0.04)}
-    .hero h1{margin:0;font-size:2.1rem}
-    .subtitle{color:var(--muted);margin-top:.4rem}
-    .cta{margin-top:1rem}
-    .btn{display:inline-block;padding:.5rem .9rem;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn{background:var(--accent);color:white}
-    .btn-outline{background:transparent;border:2px solid rgba(37,99,235,0.12);color:var(--accent);margin-left:.6rem}
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:2rem
+    }
 
-    main{padding:2rem 0}
-    h2{font-size:1.2rem;margin-bottom:.6rem}
-    p.lead{color:var(--muted);margin-top:0}
+    .hero .container {
+      display: flex;
+      align-items: center;   
+      gap: 2rem;             
+    }
 
-    .skills-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
-    .skills-list li{background:white;padding:.4rem .6rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-size:.9rem}
+    .image {
+      width: 180px;          
+      height: 180px;
+      border-radius: 50%;    
+      object-fit: cover;
+      border: 5px solid #555;     
+    }
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
-    .card{background:var(--card-bg);border-radius:12px;padding:1rem;border:1px solid rgba(15,23,42,0.04);box-shadow:0 1px 4px rgba(2,6,23,0.02)}
-    .card h3{margin:0 0 .4rem 0}
-    .card p{margin:.25rem 0;color:var(--muted)}
-    .meta{font-size:.85rem;color:var(--muted)}
+    .hero{
+      background:linear-gradient(180deg, rgba(37,99,235,0.09), transparent);
+      padding:3rem 0;
+      border-bottom:1px solid rgba(15,23,42,0.04)
+    }
 
-    footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+    .hero h1{
+      margin:0;
+      font-size:2.1rem
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin-top:.4rem
+    }
+
+    .cta{
+      margin-top:1rem
+    }
+
+    .btn{
+      display:inline-block;
+      padding:.5rem .9rem;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600
+    }
+
+    .btn{
+      background:var(--accent);
+      color:white
+    }
+
+    .btn-outline{
+      background:transparent;
+      border:2px solid rgba(37,99,235,0.12);
+      color:var(--accent);
+      margin-left:.6rem
+    }
+
+    main{
+      padding:2rem 0
+    }
+
+    h2{
+      font-size:1.2rem;
+      margin-bottom:.6rem
+    }
+
+    p.lead{
+      color:var(--muted);
+      margin-top:0
+    }
+
+    .skills-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      list-style:none;
+      padding:0;
+      margin:0
+    }
+
+    .skills-list li{
+      background:white;
+      padding:.4rem .6rem;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,0.06);
+      font-size:.9rem
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:var(--gap)
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:12px;
+      padding:1rem;
+      border:1px solid rgba(15,23,42,0.04);
+      box-shadow:0 1px 4px rgba(2,6,23,0.02)
+    }
+
+    .card h3{
+      margin:0 0 .4rem 0
+    }
+
+    .card p{
+      margin:.25rem 0;
+      color:var(--muted)
+    }
+
+    .meta{
+      font-size:.85rem;
+      color:var(--muted)
+    }
+
+    footer{
+      padding:2rem 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem
+    }
 
     @media (max-width:560px){
       .hero{padding:2rem 0}
@@ -56,12 +164,18 @@
   
 <body>
   <header class="hero">
-    <div class="container">
+  <div class="container">
+    <img src="./profpic.jpg" alt="Profile picture" class="image">
+    <div>
       <h1>Hi — I'm Geoffrey Duncan Julianto</h1>
-      <p class="subtitle">Computer Science Major • Database submajor • Web development & data</p>
-      <p class="cta"><a href="#projects" class="btn">See my projects</a> <a class="btn btn-outline" href="#contact">Contact</a></p>
+      <p class="subtitle">Computer Science Major • Database Submajor • Web Development & Data</p>
+      <p class="cta">
+        <a href="#projects" class="btn">See my projects</a> 
+        <a class="btn btn-outline" href="#contact">Contact</a>
+      </p>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="container">
     <section id="about">
@@ -80,6 +194,8 @@
         <li>Cloud Computing</li>
         <li>Data Analytics • Data Mining</li>
         <li>GIS</li>
+        <li>English</li>
+        <li>Indonesian</li>
       </ul>
     </section>
 
@@ -97,15 +213,76 @@
         <article class="card">
           <h3>Personal Website (This site)</h3>
           <p class="meta">HTML • CSS • GitHub Pages</p>
-          <p>Static portfolio hosted with GitHub Pages. Use this repo as a template to get started quickly.</p>
-          <p><a href="#" target="_blank">View source</a></p>
+          <p>Static portfolio hosted with GitHub Pages.</p>
         </article>
 
-        <!-- For future Project Cards -->
+        <article class="card">
+          <h3>Plate Recognition AI with Database Integration</h3>
+          <p class="meta">Python, SQL</p>
+          <p>AI that is able to detect and recognize license plates in Indonesia, then it checks the database to validate the license plate scanned. Built as a college project — source on GitHub.</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Number-Plates-AI-Recognition" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>VKellogg's Website</h3>
+          <p class="meta">HTML, CSS, JS</p>
+          <p>A website about the brand VKellogg's, built as a college assignment</p>
+          <p><a href="https://github.com/GeoffreyJulianto/VKellogg-s" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>IngfoDoc Website</h3>
+          <p class="meta">HTML, CSS, JS</p>
+          <p>A website about digital health services app that people can use to consult experts and the system about their health or worries, built as a college project</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Ingfodoc" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>CSV Reading, Searching, and Writing using C</h3>
+          <p class="meta">C Programming Language</p>
+          <p>C program that is used to read, search, and write to a csv file in the form of a menu</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Reading-Searching-Writing-CSV-using-C" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Slang Words Dictionary using C</h3>
+          <p class="meta">C Programming Language</p>
+          <p>A dictionary that stores Slang words and its description using C language</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Slang-Word-Dictionary-using-C" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Jakarta Flood Data Analytics</h3>
+          <p class="meta">Python</p>
+          <p>A simple analysis on Jakarta Floods using dataset from 2016-2020 on Kaggle</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Jakarta-Flood-Data-Analytics" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Netflix Releases Data Analysis and Visualization</h3>
+          <p class="meta">Tableau</p>
+          <p>A simple data visualization about Netflix's releases using Tableau</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Netflix-Releases-Data-Analysis-and-Visualization" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Data Normalization Simulation</h3>
+          <p class="meta">Normalization</p>
+          <p>A data normalization project for an e-commerce dataset</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Data-Normalization-Simulation" target="_blank">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Conference Paper for Front-End Development using AI</h3>
+          <p class="meta">Research, HTML, CSS, JS</p>
+          <p>A Conference Paper about a Comparative Analysis of Gemini 2.0 Flash, Microsoft Copilot, and ChatGPT-4o’s Accuracy in Translating UI Images into Front-End Web Code</p>
+          <p><a href="https://github.com/GeoffreyJulianto/Conference-Paper-for-Front-End-Development-using-AI" target="_blank">View on GitHub</a></p>
+        </article>
+        
       </div>
     </section>
 
-    <section id="contact" style="margin-top:1.6rem">
+    <section id="contact" style="margin-top:10rem">
       <h2>Contact</h2>
       <p>If you'd like to collaborate, hire, or ask about my projects — email me at <a href="geoffrey.dj@gmail.com">geoffrey.dj@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/geoffrey-duncan-julianto-724833296">LinkedIn</a></p>
     </section>
@@ -113,7 +290,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> Geoffrey Duncan Julianto — Built with GitHub Pages</p>
+      <p>&copy; <span id="year"></span> Geoffrey Duncan Julianto</p>
     </div>
   </footer>
 
