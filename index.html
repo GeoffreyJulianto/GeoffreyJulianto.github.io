@@ -24,10 +24,6 @@
       height:100%
     }
 
-    /* header.hero{
-      background-color: lightgrey;
-    } */
-
     body{
       margin:0;
       font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
@@ -43,20 +39,49 @@
       padding:2rem
     }
 
-
-
     .hero .container {
       display: flex;
       align-items: center;   
-      gap: 2rem;             
+      gap: 2rem;
+      flex-wrap: wrap;             
     }
 
-    .image {
+    .profimage {
       width: 180px;          
       height: 180px;
       border-radius: 50%;    
       object-fit: cover;
       border: 5px solid grey;     
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .experience-row {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        flex-wrap: wrap; 
+    }
+
+    .exp-image {
+        flex: 0 0 220px;          
+        max-width: 40%;           
+        min-width: 140px;         
+    }
+    .exp-image img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .experience-list {
+        flex: 1 1 220px;          
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     .hero{
@@ -166,8 +191,28 @@
     }
 
     @media (max-width:560px){
-      .hero{padding:2rem 0}
-      .container{padding:1rem}
+      .hero .container{
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .image{
+            width: 140px;
+            height: 140px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .experience-row {
+            flex-direction: column;
+        }
+        .exp-image {
+            max-width: 100%;
+            flex: 0 0 auto;
+        }
+        .experience-list {
+            width: 100%;
+        }
     }
 
   </style>
@@ -176,7 +221,7 @@
 <body>
   <header class="hero">
     <div class="container">
-      <img src="./profpic.jpg" alt="Profile picture" class="image">
+      <img src="./profpic.jpg" alt="Profile picture" class="profimage">
       <div>
         <h1>Hi — I'm Geoffrey Duncan Julianto</h1>
         <p class="subtitle">Computer Science Major • Database Submajor • Web Development & Data</p>
@@ -195,23 +240,26 @@
     </section>
 
     <section id="experience-education" style="margin-top: 2rem;">
-      <h2>Experience and Education</h2>    
-      <div style="display: flex;">
-        <a href="./newtons.jpg">
-          <img src="./newtons.jpg" alt="Newton's Academy" style="width: 25rem; height: auto;">
-        </a>
-        <ul class="experience-list">
-          <li>
-            <strong>Newton's Academy Vice President [Jul 2021 - Now]</strong>
-            <p class="lead">I managed all the tutors and also taught Senior High School students in subjects such as Mathematics, Chemistry, Physics, and English</p>
-          </li>
-          <li>
-            <strong>Binus University Student [2023 - Now]</strong>
-            <p class="lead">S1 Computer Science, Database submajor</p>
-          </li>
-        </ul>
-      </div>
+        <h2>Experience and Education</h2>
+        <div class="experience-row">
+            <div class="exp-image">
+                <a href="./newtons.jpg">
+                    <img src="./newtons.jpg" alt="Newton's Academy">
+                </a>
+            </div>
+            <ul class="experience-list">
+                <li>
+                    <strong>Newton's Academy Vice President [Jul 2021 - Now]</strong>
+                    <p class="lead">I managed all the tutors and also taught Senior High School students in subjects such as Mathematics, Chemistry, Physics, and English</p>
+                </li>
+                <li>
+                    <strong>Binus University Student [2023 - Now]</strong>
+                    <p class="lead">S1 Computer Science, Database submajor</p>
+                </li>
+            </ul>
+        </div>
     </section>
+
 
 
     <section id="skills" style="margin-top:1.6rem">
