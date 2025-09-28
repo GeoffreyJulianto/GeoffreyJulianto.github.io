@@ -24,9 +24,17 @@
       height:100%
     }
 
+    /* header.hero{
+      background-color: lightgrey;
+    } */
+
     body{
-      margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background:var(--bg);color:#0f172a;line-height:1.5;background-color:#F2DAE5;
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#0f172a;
+      line-height:1.5;
+      background-color: #F2DAE5;
     }
 
     .container{
@@ -34,6 +42,8 @@
       margin:0 auto;
       padding:2rem
     }
+
+
 
     .hero .container {
       display: flex;
@@ -46,7 +56,7 @@
       height: 180px;
       border-radius: 50%;    
       object-fit: cover;
-      border: 5px solid #555;     
+      border: 5px solid grey;     
     }
 
     .hero{
@@ -159,29 +169,50 @@
       .hero{padding:2rem 0}
       .container{padding:1rem}
     }
+
   </style>
 </head>
   
 <body>
   <header class="hero">
-  <div class="container">
-    <img src="./profpic.jpg" alt="Profile picture" class="image">
-    <div>
-      <h1>Hi — I'm Geoffrey Duncan Julianto</h1>
-      <p class="subtitle">Computer Science Major • Database Submajor • Web Development & Data</p>
-      <p class="cta">
-        <a href="#projects" class="btn">See my projects</a> 
-        <a class="btn btn-outline" href="#contact">Contact</a>
-      </p>
+    <div class="container">
+      <img src="./profpic.jpg" alt="Profile picture" class="image">
+      <div>
+        <h1>Hi — I'm Geoffrey Duncan Julianto</h1>
+        <p class="subtitle">Computer Science Major • Database Submajor • Web Development & Data</p>
+        <p class="cta">
+          <a href="#projects" class="btn">See my projects</a> 
+          <a class="btn btn-outline" href="#contact">Contact</a>
+        </p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main class="container">
     <section id="about">
       <h2>About me</h2>
-      <p class="lead">As a computer science student specializing in database systems, I build reliable, data-driven solutions using C, Python, Java, SQL, and modern web technologies (HTML, CSS, JavaScript). My academic path exposed me to cloud computing, data analytics, and big data; I am currently exploring data mining, GIS, and web programming. I enjoy turning messy datasets into clear insights and crafting web interfaces that make those insights useful.</p>
+      <p class="lead">As a computer science student specializing in database systems, I build reliable, data-driven solutions using C, Python, Java, SQL, and modern web technologies (HTML, CSS, JavaScript). My academic path exposed me to cloud computing, data analytics, and big data; I am currently exploring data mining and web programming. I enjoy turning messy datasets into clear insights and crafting web interfaces that make those insights useful.</p>
     </section>
+
+    <section id="experience-education" style="margin-top: 2rem;">
+      <h2>Experience and Education</h2>    
+      <div style="display: flex;">
+        <a href="./newtons.jpg">
+          <img src="./newtons.jpg" alt="Newton's Academy" style="width: 25rem; height: auto;">
+        </a>
+        <ul class="experience-list">
+          <li>
+            <strong>Newton's Academy Vice President [Jul 2021 - Now]</strong>
+            <p class="lead">I managed all the tutors and also taught Senior High School students in subjects such as Mathematics, Chemistry, Physics, and English</p>
+          </li>
+          <li>
+            <strong>Binus University Student [2023 - Now]</strong>
+            <p class="lead">S1 Computer Science, Database submajor</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
 
     <section id="skills" style="margin-top:1.6rem">
       <h2>Skills</h2>
@@ -190,10 +221,12 @@
         <li>Python</li>
         <li>Java</li>
         <li>SQL / Database Design</li>
-        <li>HTML • CSS • JavaScript</li>
-        <li>Cloud Computing</li>
-        <li>Data Analytics • Data Mining</li>
-        <li>GIS</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Big Data Processing</li>
+        <li>Data Analytics</li>
+        <li>Data Mining</li>
         <li>English</li>
         <li>Indonesian</li>
       </ul>
